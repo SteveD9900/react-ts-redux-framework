@@ -1,0 +1,19 @@
+.LoginForm {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    .form-label {
+        margin-left: 10px;
+    }
+    .form-btn {
+        font-size: 14px;
+        font-weight: 400;
+        color: white;
+        background-color: #0052cc;
+        border: none;
+        padding: 3px;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0 1%;
+    }
+}

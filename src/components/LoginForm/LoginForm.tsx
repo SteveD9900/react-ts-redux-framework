@@ -1,4 +1,5 @@
 import React from "react";
+import "./LoginForm.scss";
 
 export interface Props {
   shouldRemember: boolean;
@@ -37,8 +38,14 @@ function LoginForm(props: Props) {
   };
 
   return (
-    <form data-testid="login-form" onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
+    <form
+      data-testid="login-form"
+      onSubmit={handleSubmit}
+      className="LoginForm"
+    >
+      <label className="form-label" htmlFor="username">
+        Username:
+      </label>
       <input
         data-testid="username"
         type="text"
@@ -47,7 +54,9 @@ function LoginForm(props: Props) {
         onChange={handleUsernameChange}
       />
 
-      <label htmlFor="password">Password:</label>
+      <label className="form-label" htmlFor="password">
+        Password:
+      </label>
       <input
         data-testid="password"
         type="password"
@@ -58,6 +67,7 @@ function LoginForm(props: Props) {
 
       <label>
         <input
+          className="form-label"
           data-testid="remember"
           name="remember"
           type="checkbox"
@@ -67,7 +77,7 @@ function LoginForm(props: Props) {
         Remember me?
       </label>
 
-      <button type="submit" data-testid="submit">
+      <button type="submit" data-testid="submit" className="form-btn">
         Sign in
       </button>
     </form>
