@@ -4,6 +4,11 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "./state";
 import { RootState } from "./state/reducers";
 import Button from "@mui/material/Button";
+import LoginForm from "./LoginForm";
+
+function noop() {
+  return;
+}
 
 function App() {
   const state = useSelector((state: RootState) => state.bank);
@@ -30,6 +35,16 @@ function App() {
       <Button onClick={() => bankrupt()} variant="outlined" color="error">
         Bankrupt
       </Button>
+      <br />
+      <div>
+        <LoginForm
+          shouldRemember={true}
+          onPasswordChange={noop}
+          onRememberChange={noop}
+          onSubmit={noop}
+          onUsernameChange={noop}
+        />
+      </div>
     </div>
   );
 }
