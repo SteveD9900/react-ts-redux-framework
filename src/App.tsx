@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "./state";
 import { RootState } from "./state/reducers";
 import Button from "@mui/material/Button";
-import LoginForm from "./LoginForm";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 function noop() {
   return;
@@ -21,6 +21,16 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+        <LoginForm
+          shouldRemember={true}
+          onPasswordChange={noop}
+          onRememberChange={noop}
+          onSubmit={noop}
+          onUsernameChange={noop}
+        />
+      </div>
+      <br />
       <h1>{state}</h1>
       <Button
         onClick={() => depositMoney(1000)}
@@ -35,16 +45,6 @@ function App() {
       <Button onClick={() => bankrupt()} variant="outlined" color="error">
         Bankrupt
       </Button>
-      <br />
-      <div>
-        <LoginForm
-          shouldRemember={true}
-          onPasswordChange={noop}
-          onRememberChange={noop}
-          onSubmit={noop}
-          onUsernameChange={noop}
-        />
-      </div>
     </div>
   );
 }
