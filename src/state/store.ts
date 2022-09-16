@@ -1,8 +1,8 @@
-import { applyMiddleware } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
-import thunk from "redux-thunk"
-import reducers from "./reducers";
+import * as BankSlice from "./bank"
 
 export const store = configureStore({
-    reducer: reducers
+    reducer: {
+        bank: BankSlice.reducer
+    }
 })
