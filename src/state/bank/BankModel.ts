@@ -1,3 +1,3 @@
 export interface BankState { 
-    Bank: number
+    value: number
 }

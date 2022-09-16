@@ -5,11 +5,11 @@ import {
   DepositMoney,
   WithdrawMoney,
   Bankrupt,
-  selectBank,
+  selectBankAmount,
 } from "../../state/bank";
 
 function BankAccount() {
-  const state = useSelector(selectBank);
+  const state = useSelector(selectBankAmount);
   const dispatch = useDispatch();
 
   return (
