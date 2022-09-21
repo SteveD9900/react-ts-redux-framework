@@ -1,14 +1,10 @@
 import "./App.scss";
 import { LoginForm, BankAccount } from "./components";
 
-function noop() {
-  return;
-}
-
 function App() {
   return (
     <div className="App">
-      Hello!
+      Hello! Let's Start~
     </div>
   );
 }
