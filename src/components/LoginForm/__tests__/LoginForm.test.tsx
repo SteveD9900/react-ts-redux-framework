@@ -1,7 +1,8 @@
 import React from "react";
-import { render, fireEvent, waitForElement } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import LoginForm, { Props } from "../LoginForm";
+import userEvent from '@testing-library/user-event';
 
 function renderLoginForm(props: Partial<Props> = {}) {
   const defaultProps: Props = {
@@ -82,7 +83,7 @@ describe("<LoginForm />", () => {
     const remember = await findByTestId("remember");
     const submit = await findByTestId("submit");
 
-    fireEvent.change(username, { target: { value: "test" } });
+    userEvent.type(username, "test");
     fireEvent.change(password, { target: { value: "password" } });
     fireEvent.click(remember);
     fireEvent.click(submit);
