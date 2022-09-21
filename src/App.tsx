@@ -8,17 +8,7 @@ function noop() {
 function App() {
   return (
     <div className="App">
-      <div>
-        <LoginForm
-          shouldRemember={true}
-          onPasswordChange={noop}
-          onRememberChange={noop}
-          onSubmit={noop}
-          onUsernameChange={noop}
-        />
-      </div>
-      <br />
-      <BankAccount />
+      Hello!
     </div>
   );
 }
